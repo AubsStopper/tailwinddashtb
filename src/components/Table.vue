@@ -10,13 +10,13 @@
       </div>
     </div>
     <div class="mt-8 flex flex-col">
-      <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="-my-2 -mx-4 sm:-mx-6 lg:-mx-8">
         <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+          <div class="shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
             <table class="min-w-full divide-y divide-gray-300">
               <thead class="bg-gray-50">
               <tr>
-                <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 sticky">Name</th>
+                <th scope="col" class="py-3 text-left text-sm font-semibold text-gray-900">Name</th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
                 <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Role</th>
@@ -53,7 +53,7 @@
 const people = [
 
   { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member', fake: 'data' },
-  { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
+  { name: 'Lindsay Walton', title: 'Tester QA', email: 'lindsay.walton@example.com', role: 'Member', fake: 'data'},
   { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
   { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
   { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member', fake: 'data' },
@@ -90,9 +90,20 @@ const people = [
 
 
 <style scoped>
-  th {
+
+th {
     position: sticky;
     top: 0;
+    z-index: 1;
+    background: white;
+  }
+
+  td:nth-child(1) {
+    position: sticky;
+    left: 0;
+    top: 32px;
+    z-index: 2;
+    background: white;
   }
 
 </style>
